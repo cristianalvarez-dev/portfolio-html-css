@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master - ToDoList</title>
+
+    <!-- Reset básico y tipografías desde Google Fonts (display + cuerpo + mono) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header con nav en Flexbox (logo a un lado, enlaces al otro) -->
+    <header class="site-header">
+      <a href="#inicio" class="logo">CA<span>_ToDoList</span></a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#bio">Bio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="inicio" class="hero">
+        <p class="hero-tag">// todolist-proyectos.md</p>
+        <h1 class="hero-title">
+          <span class="checkbox" aria-hidden="true">[ ]</span> Aprender a programar
+        </h1>
+        <p class="hero-subtitle">
+          Con el cierre de 2025 empieza una nueva etapa profesional y académica. Este primer
+          proyecto, construido en HTML y CSS, actúa como escaparate del resto de trabajos del
+          Máster, reuniendo en un mismo lugar las habilidades desarrolladas a lo largo del año.
+        </p>
+        <a href="#proyectos" class="btn-cta">Ver mis proyectos</a>
+      </section>
+
+      <!-- Sección "Bio" -->
+      <section id="bio" class="about">
+        <h2><span class="checkbox done" aria-hidden="true">[x]</span> Bio</h2>
+        <div class="about-card">
+          <p class="about-text">
+            Después de más de 20 años combinando dos mundos —el trabajo social con jóvenes y
+            la operativa del sector turístico— este año he dado un paso que llevaba tiempo
+            posponiendo: formarme a fondo en programación.
+          </p>
+          <p class="about-text">
+            Mi recorrido empezó a los 16 años como voluntario y monitor de campamentos en
+            Reino Unido, Alemania, Bélgica y casi toda España, los últimos años como director.
+            Más tarde pasé 8 años en Escocia trabajando en logística y operaciones dentro del
+            sector turístico, gestionando equipos, procesos y la parte menos visible (pero
+            esencial) de que todo funcione.
+          </p>
+          <p class="about-text">
+            Ese contacto constante con procesos y datos operativos me acercó cada vez más a la
+            tecnología. Hoy curso un Máster en Programación, y mi objetivo es especializarme en
+            análisis de datos. Cuanto más aprendo, más admiro a quienes se dedican a este
+            campo — es exigente, pero pocas cosas son tan satisfactorias como ver un proyecto
+            terminado y funcionando.
+          </p>
+          <p class="about-text">
+            Actualmente construyendo mi portfolio y buscando dar el salto profesional hacia el
+            desarrollo y el análisis de datos.
+          </p>
+        </div>
+      </section>
+
+      <!-- Galería de proyectos en CSS Grid. -->
+      <section id="proyectos" class="task-list">
+        <h2>Lista de proyectos</h2>
+        <div class="task-grid">
+          <article class="task-card">
+            <span class="task-status done">[x]</span>
+            <img src="img/katas-javascript.webp" alt="Katas JavaScript" />
+            <h3>Katas JavaScript</h3>
+            <p class="task-desc">
+              56 katas de JavaScript, desde variables y bucles hasta manipulación del DOM
+              y programación asíncrona. Incluye una pequeña página web hecha desde cero
+              para practicar interacción con el navegador.
+            </p>
+            <a href="https://github.com/cristianalvarez-dev" class="task-link" target="_blank" rel="noopener">Ver repositorio →</a>
+          </article>
+          <article class="task-card">
+            <span class="task-status done">[x]</span>
+            <img src="img/katas-python.webp" alt="Katas Python" />
+            <h3>Katas Python</h3>
+            <p class="task-desc">
+              40 katas de Python, resueltos uno a uno con sus propios tests. Un recorrido
+              por la lógica del lenguaje, desde lo más básico hasta programación orientada
+              a objetos.
+            </p>
+            <a href="https://github.com/cristianalvarez-dev" class="task-link" target="_blank" rel="noopener">Ver repositorio →</a>
+          </article>
+          <article class="task-card">
+            <span class="task-status pending">[x]</span>
+            <img src="img/bases-de-datos.webp" alt="Bases de Datos" />
+            <h3>Bases de Datos</h3>
+            <p class="task-desc">
+              Consultas SQL sobre una base de datos relacional de vuelos, practicando cómo
+              extraer y cruzar información real a partir de tablas conectadas entre sí.
+            </p>
+            <a href="https://github.com/cristianalvarez-dev" class="task-link" target="_blank" rel="noopener">Ver repositorio →</a>
+          </article>
+          <article class="task-card">
+            <span class="task-status pending">[x]</span>
+            <img src="img/nosql.webp" alt="noSQL" />
+            <h3>noSQL</h3>
+            <p class="task-desc">
+              Un pequeño servidor de películas construido con Node, Express y MongoDB,
+              explorando cómo se guardan y consultan los datos en una base no relacional.
+            </p>
+            <a href="https://github.com/cristianalvarez-dev" class="task-link" target="_blank" rel="noopener">Ver repositorio →</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contacto — layout en Flexbox (formulario + datos lado a lado en escritorio) -->
+      <section id="contacto" class="contact">
+        <h2><span class="checkbox" aria-hidden="true">[ ]</span> Contacto</h2>
+        <div class="contact-wrap">
+          <form class="contact-form" action="mailto:cristianalvarezgonzalez.dev@gmail.com" method="post" enctype="text/plain">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+          </form>
+          <div class="contact-info">
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:cristianalvarezgonzalez.dev@gmail.com">cristianalvarezgonzalez.dev@gmail.com</a>
+            </p>
+            <p>
+              <strong>GitHub:</strong>
+              <a href="https://github.com/cristianalvarez-dev" target="_blank" rel="noopener">github.com/cristianalvarez-dev</a>
+            </p>
+            <p>
+              <strong>LinkedIn:</strong>
+              <a href="https://www.linkedin.com/in/cristian-m-%C3%A1lvarez-gonz%C3%A1lez-a9619017/" target="_blank" rel="noopener">linkedin.com/in/cristian-m-álvarez-gonzález</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Cristian Álvarez</p>
+      <div class="footer-links">
+        <a href="https://github.com/cristianalvarez-dev" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/cristian-m-%C3%A1lvarez-gonz%C3%A1lez-a9619017/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </footer>
+  </body>
+</html>
