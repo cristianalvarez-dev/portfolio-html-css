@@ -29,15 +29,15 @@
   --at-max-width: 1100px;
 }
 
-/* html/body a ancho completo y overflow-x:hidden para que ningún elemento ancho 
-   genere barra de desplazamiento lateral. */
+/* overflow-x:hidden solo en html para que ningún elemento ancho genere barra
+   de desplazamiento lateral. Si se aplica también a body, el header deja de
+   ser sticky. */
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  overflow-x: hidden;
   width: 100%;
   font-family: var(--at-font-body);
   color: var(--at-color-ink);
